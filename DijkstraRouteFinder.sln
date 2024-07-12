@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34902.65
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DijkstraRouteFinder.API", "DijkstraRouteFinder.API\DijkstraRouteFinder.API.csproj", "{BD4808E7-2E9B-4B24-A7F9-53182C59503E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DijkstraRouteFinder.Models", "DijkstraRouteFinder.Models\DijkstraRouteFinder.Models.csproj", "{DF003F3E-B930-4819-B2FC-E082DE69502F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DijkstraRouteFinder.Services", "DijkstraRouteFinder.Services\DijkstraRouteFinder.Services.csproj", "{04CA8AE6-B1BF-43DF-AC7E-ECEBB8646EB4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD4808E7-2E9B-4B24-A7F9-53182C59503E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD4808E7-2E9B-4B24-A7F9-53182C59503E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD4808E7-2E9B-4B24-A7F9-53182C59503E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD4808E7-2E9B-4B24-A7F9-53182C59503E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF003F3E-B930-4819-B2FC-E082DE69502F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF003F3E-B930-4819-B2FC-E082DE69502F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF003F3E-B930-4819-B2FC-E082DE69502F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF003F3E-B930-4819-B2FC-E082DE69502F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04CA8AE6-B1BF-43DF-AC7E-ECEBB8646EB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04CA8AE6-B1BF-43DF-AC7E-ECEBB8646EB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04CA8AE6-B1BF-43DF-AC7E-ECEBB8646EB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04CA8AE6-B1BF-43DF-AC7E-ECEBB8646EB4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E5BF1EFD-7B40-4566-9790-B44B52B3DEB0}
+	EndGlobalSection
+EndGlobal
