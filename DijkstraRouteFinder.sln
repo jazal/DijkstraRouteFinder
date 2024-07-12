@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DijkstraRouteFinder.Models"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DijkstraRouteFinder.Services", "DijkstraRouteFinder.Services\DijkstraRouteFinder.Services.csproj", "{04CA8AE6-B1BF-43DF-AC7E-ECEBB8646EB4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DijkstraRouteFinder.ConsoleApp", "DijkstraRouteFinder.ConsoleApp\DijkstraRouteFinder.ConsoleApp.csproj", "{F8D5DFC0-3760-4D06-8835-FEEF31DBEAF9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{04CA8AE6-B1BF-43DF-AC7E-ECEBB8646EB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04CA8AE6-B1BF-43DF-AC7E-ECEBB8646EB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04CA8AE6-B1BF-43DF-AC7E-ECEBB8646EB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8D5DFC0-3760-4D06-8835-FEEF31DBEAF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8D5DFC0-3760-4D06-8835-FEEF31DBEAF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8D5DFC0-3760-4D06-8835-FEEF31DBEAF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8D5DFC0-3760-4D06-8835-FEEF31DBEAF9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
