@@ -17,7 +17,7 @@ namespace DijkstraRouteFinder.API.Controllers
         }
 
         [HttpPost]
-        public IActionResult GetShortestPath([FromBody] ShortestPathRequest request)
+        public IActionResult GetShortestPath([FromBody] ShortestPathRequestDto request)
         {
             var graphNodes = GetGraphNodes(); // Retrieve graph nodes from a data source
             var result = _shortestPathService.ShortestPath(request.FromNode, request.ToNode, graphNodes);
@@ -35,7 +35,7 @@ namespace DijkstraRouteFinder.API.Controllers
         }
     }
 
-    public class ShortestPathRequest
+    public class ShortestPathRequestDto
     {
         public string FromNode { get; set; }
         public string ToNode { get; set; }

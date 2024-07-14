@@ -4,7 +4,7 @@ namespace DijkstraRouteFinder.Services;
 
 public class ShortestPathService : IShortestPathService
 {
-    public ShortestPathData ShortestPath(string fromNodeName, string toNodeName, List<Node> graphNodes)
+    public ShortestPathResponseDto ShortestPath(string fromNodeName, string toNodeName, List<Node> graphNodes)
     {
         // Implement Dijkstra's Algorithm
         var shortestPaths = new Dictionary<Node, (int Distance, List<string> Path)>();
@@ -39,7 +39,7 @@ public class ShortestPathService : IShortestPathService
 
         var endNode = graphNodes.First(n => n.Name == toNodeName);
         return shortestPaths.ContainsKey(endNode) ?
-            new ShortestPathData { NodeNames = shortestPaths[endNode].Path, Distance = shortestPaths[endNode].Distance } :
+            new ShortestPathResponseDto { NodeNames = shortestPaths[endNode].Path, Distance = shortestPaths[endNode].Distance } :
             null;
     }
 }
