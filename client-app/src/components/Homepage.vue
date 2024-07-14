@@ -4,12 +4,14 @@ import type { IShortestPathResponseDto } from './../interfaces/index';
 import toastService from '../services/toastService';
 import api from '../services/api';
 import PathDetailCard from './PathDetailCard.vue';
+import NodeDiagram from './NodeDiagram.vue';
 import IconTooling from './icons/IconTooling.vue';
 
 export default {
   components: {
     PathDetailCard,
-    IconTooling
+    NodeDiagram,
+    IconTooling,
   },
   data() {
     return {
@@ -46,14 +48,14 @@ export default {
       <p>Discovering Optimal Routes Through Nodes Using Dijkstra's Method</p>
     </div>
     <div class="container">
-
       <div class="row justify-content-center">
         <div class="col-md-8">
           <div class="card shadow-lg">
             <div class="card-body">
               <div class="row">
+                <h6 class="card-title text-primary fw-bold">Select Path</h6>
+                <NodeDiagram />
                 <div class="col-lg-6 col-sm-12">
-                  <h6 class="card-title text-primary fw-bold">Select Path</h6>
                   <form>
                     <div class="mb-3">
                       <label for="fromNode" class="form-label">From Node</label>
