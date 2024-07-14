@@ -1,19 +1,24 @@
 <!-- This icon is from <https://github.com/Templarian/MaterialDesign>, distributed under Apache 2.0 (https://www.apache.org/licenses/LICENSE-2.0) license-->
 <template>
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-    aria-hidden="true"
-    role="img"
-    class="iconify iconify--mdi"
-    width="24"
-    height="24"
-    preserveAspectRatio="xMidYMid meet"
-    viewBox="0 0 24 24"
-  >
-    <path
-      d="M20 18v-4h-3v1h-2v-1H9v1H7v-1H4v4h16M6.33 8l-1.74 4H7v-1h2v1h6v-1h2v1h2.41l-1.74-4H6.33M9 5v1h6V5H9m12.84 7.61c.1.22.16.48.16.8V18c0 .53-.21 1-.6 1.41c-.4.4-.85.59-1.4.59H4c-.55 0-1-.19-1.4-.59C2.21 19 2 18.53 2 18v-4.59c0-.32.06-.58.16-.8L4.5 7.22C4.84 6.41 5.45 6 6.33 6H7V5c0-.55.18-1 .57-1.41C7.96 3.2 8.44 3 9 3h6c.56 0 1.04.2 1.43.59c.39.41.57.86.57 1.41v1h.67c.88 0 1.49.41 1.83 1.22l2.34 5.39z"
-      fill="currentColor"
-    ></path>
+  <svg height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 492.087 492.087" xml:space="preserve" fill="#000000">
+    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+    <g id="SVGRepo_iconCarrier">
+      <g>
+        <path style="fill: #005ece"
+          d="M420.022,75.299C373.551,28.827,311.764,3.234,246.043,3.234v40 c113.613,0,206.043,92.431,206.043,206.044v12.819c24.658,24.019,40,57.557,40,94.617V249.278 C492.087,183.557,466.494,121.77,420.022,75.299z">
+        </path>
+        <path style="fill: #2488ff"
+          d="M72.064,75.299C25.593,121.77,0,183.557,0,249.278v107.436h172.139V224.574h-40 c-35.802,0-68.318,14.319-92.139,37.522v-12.819c0-113.613,92.431-206.044,206.043-206.044v-40 C180.323,3.234,118.536,28.827,72.064,75.299z">
+        </path>
+        <path style="fill: #005ece" d="M0,356.714c0,72.862,59.277,132.139,132.139,132.139h40V356.714H0z"></path>
+        <path style="fill: #00479b"
+          d="M452.087,262.097c-23.821-23.203-56.337-37.522-92.139-37.522h-40v132.139h172.139 C492.087,319.654,476.745,286.115,452.087,262.097z">
+        </path>
+        <path style="fill: #003068" d="M319.948,356.714v132.139h40c72.862,0,132.139-59.277,132.139-132.139H319.948z">
+        </path>
+      </g>
+    </g>
   </svg>
 </template>

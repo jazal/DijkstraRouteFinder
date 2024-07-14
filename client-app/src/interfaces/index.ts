@@ -1,16 +1,16 @@
 export interface IShortestPathRequestDto {
-    fromNode: string;
-    toNode: string;
+  fromNode: string
+  toNode: string
 }
 
 export interface IShortestPathResponseDto {
-    nodeNames: string[];
-    distance: number;
-    pathSegments: IPathSegmentDto[];
+  nodeNames: string[]
+  distance: number
+  pathSegments: IPathSegmentDto[]
 }
 
 export interface IPathSegmentDto {
-    fromNode: string;
-    toNode: string;
-    distance: number;
+  fromNode: string
+  toNode: string
+  distance: number
 }
