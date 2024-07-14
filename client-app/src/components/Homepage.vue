@@ -1,6 +1,7 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script lang="ts">
 import type { IShortestPathResponseDto } from './../interfaces/index';
+import toastService from '../services/toastService';
 import api from '../services/api';
 
 export default {
@@ -20,14 +21,13 @@ export default {
     },
     async calculate() {
       try {
-        console.log('Calculate button clicked')
         const response = await api.getShortestPath({ fromNode: this.fromNode, toNode: this.toNode })
         this.shortestPath = response.data
-      } catch (error) {
-        console.error('Error fetching items:', error)
+      } catch (error: any) {
+        console.error(error)
+        toastService.error(error?.response?.data?.message);
       }
     }
-
   }
 }
 </script>
