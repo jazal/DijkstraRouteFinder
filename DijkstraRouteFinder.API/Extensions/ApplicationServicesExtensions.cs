@@ -1,4 +1,5 @@
-﻿using DijkstraRouteFinder.Services;
+﻿using DijkstraRouteFinder.API.Errors;
+using DijkstraRouteFinder.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DijkstraRouteFinder.API.Extensions;
@@ -13,23 +14,23 @@ public static class ApplicationServicesExtensions
 
         services.AddHttpClient();
 
-        //services.Configure<ApiBehaviorOptions>(options =>
-        //{
-        //    options.InvalidModelStateResponseFactory = actionContext =>
-        //    {
-        //        var errors = actionContext.ModelState
-        //            .Where(e => e.Value.Errors.Count > 0)
-        //            .SelectMany(x => x.Value.Errors)
-        //            .Select(x => x.ErrorMessage).ToArray();
+        services.Configure<ApiBehaviorOptions>(options =>
+        {
+            options.InvalidModelStateResponseFactory = actionContext =>
+            {
+                var errors = actionContext.ModelState
+                    .Where(e => e.Value.Errors.Count > 0)
+                    .SelectMany(x => x.Value.Errors)
+                    .Select(x => x.ErrorMessage).ToArray();
 
-        //        var errorResponse = new ApiValidationErrorResponse
-        //        {
-        //            Errors = errors
-        //        };
+                var errorResponse = new ApiValidationErrorResponse
+                {
+                    Errors = errors
+                };
 
-        //        return new BadRequestObjectResult(errorResponse);
-        //    };
-        //});
+                return new BadRequestObjectResult(errorResponse);
+            };
+        });
 
         services.AddCors(opt =>
         {

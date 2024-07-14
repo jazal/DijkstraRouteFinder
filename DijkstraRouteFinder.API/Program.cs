@@ -1,5 +1,5 @@
 using DijkstraRouteFinder.API.Extensions;
-using DijkstraRouteFinder.Services;
+using DijkstraRouteFinder.API.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +13,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+app.UseMiddleware<ExceptionMiddleware>();
+app.UseStatusCodePagesWithReExecute("/errors/{0}");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
