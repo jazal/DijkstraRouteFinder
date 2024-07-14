@@ -48,8 +48,8 @@ export default {
     <div class="container">
 
       <div class="row justify-content-center">
-        <div class="col-md-8 position-relative">
-          <div class="card calculator-card shadow">
+        <div class="col-md-8">
+          <div class="card shadow-lg">
             <div class="card-body">
               <div class="row">
                 <div class="col-lg-6 col-sm-12">
@@ -105,9 +105,5 @@ export default {
 
 .container {
   margin-top: -4rem;
-}
-
-.calculator-container {
-  margin-top: -10rem;
 }
 </style>
