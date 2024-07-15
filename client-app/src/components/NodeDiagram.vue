@@ -7,13 +7,25 @@ import * as vNG from "v-network-graph"
 import 'v-network-graph/lib/style.css';
 
 export default {
+    name: 'NodeDiagram',
+    props: {
+        apaths: {
+            type: Array,
+            required: false
+        }
+    },
     components: {
         VNetworkGraph,
     },
     data() {
         return {
             config: vNG.defineConfigs({
+                view: {
+                    panEnabled: false,
+                    zoomEnabled: false
+                },
                 node: {
+                    visible: false,
                     selectable: true,
                     normal: {
                         type: "circle",
@@ -79,6 +91,7 @@ export default {
                         color: "#eebb00",
                         dasharray: "0",
                     },
+                    draggable: false
                 },
                 edge: {
                     selectable: true,
@@ -153,8 +166,16 @@ export default {
                             units: "strokeWidth",
                             color: null,
                         },
-                    },
+                    }
                 },
+                path: {
+                    visible: true,
+                    path: {
+                        width: 3,
+                        color: '#ffa500',
+                        dasharray: "10 16",
+                    },
+                }
             }),
             nodes: {
                 A: { name: "A" },
@@ -207,6 +228,9 @@ export default {
                     I: { x: 285, y: 60 }
                 },
             },
+            paths: {
+                path1: { edges: [] }
+            } as vNG.Paths,
             eventHandlers: {
                 "node:click": ({ node }) => {
                     console.log(node);
@@ -217,15 +241,28 @@ export default {
         }
     },
     methods: {
+    },
+    mounted() {
+    },
+    watch: {
+        apaths(newValue, oldValue) {
+            const pathEdges = this.apaths?.map((x: any) => {
+                return `edge${x.fromNode}${x.toNode}`;
+            });
+
+            this.paths.path1.edges = pathEdges ?? [];
+        }
     }
 }
 </script>
 
 <template>
-    <v-network-graph :nodes="nodes" :edges="edges" :layouts="layouts" :configs="config" :event-handlers="eventHandlers">
+    <v-network-graph :nodes="nodes" :edges="edges" :layouts="layouts" :configs="config" :event-handlers="eventHandlers"
+        :paths="paths">
     </v-network-graph>
     <!-- <code><pre>{{ nodes }}</pre></code>
     <code><pre>{{ edges }}</pre></code> -->
+    <!-- <code><pre>{{ apaths }}</pre></code> -->
 </template>
 
-<style scoped></style>
+<style lang="css"></style>

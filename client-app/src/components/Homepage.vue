@@ -54,7 +54,7 @@ export default {
             <div class="card-body">
               <div class="row">
                 <h6 class="card-title text-primary fw-bold">Select Path</h6>
-                <NodeDiagram />
+                <NodeDiagram :apaths="shortestPath?.pathSegments ?? []" />
                 <div class="col-lg-6 col-sm-12">
                   <form>
                     <div class="mb-3">
