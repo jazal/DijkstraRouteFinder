@@ -12,11 +12,13 @@
   <ItemGroup>
     <PackageReference Include="coverlet.collector" Version="6.0.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+    <PackageReference Include="Moq" Version="4.20.70" />
     <PackageReference Include="MSTest.TestAdapter" Version="3.1.1" />
     <PackageReference Include="MSTest.TestFramework" Version="3.1.1" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DijkstraRouteFinder.API\DijkstraRouteFinder.API.csproj" />
     <ProjectReference Include="..\DijkstraRouteFinder.Models\DijkstraRouteFinder.Models.csproj" />
     <ProjectReference Include="..\DijkstraRouteFinder.Services\DijkstraRouteFinder.Services.csproj" />
   </ItemGroup>
