@@ -15,7 +15,7 @@ export default {
   },
   data() {
     return {
-      nodes: [...Array(26)].map((_, i) => String.fromCharCode(i + 65)),
+      nodes: [...Array(9)].map((_, i) => String.fromCharCode(i + 65)),
       fromNode: '' as string,
       toNode: '' as string,
       shortestPath: null as IShortestPathResponseDto | null
