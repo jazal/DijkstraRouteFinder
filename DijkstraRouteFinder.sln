@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DijkstraRouteFinder.Console
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{C5A8B4E0-87FE-4851-8C7F-C35D81A5B156}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DijkstraRouteFinder.TestService", "DijkstraRouteFinder.TestService\DijkstraRouteFinder.TestService.csproj", "{D8C51629-1062-46AA-9B62-AE56DFAF4ACE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DijkstraRouteFinder.Tests", "DijkstraRouteFinder.TestService\DijkstraRouteFinder.Tests.csproj", "{D8C51629-1062-46AA-9B62-AE56DFAF4ACE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

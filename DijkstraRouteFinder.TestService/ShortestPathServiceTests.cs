@@ -2,7 +2,7 @@ using DijkstraRouteFinder.Models;
 using DijkstraRouteFinder.Models.MockData;
 using DijkstraRouteFinder.Services;
 
-namespace DijkstraRouteFinder.TestService;
+namespace DijkstraRouteFinder.Tests;
 
 [TestClass]
 public class ShortestPathServiceTests
@@ -16,7 +16,7 @@ public class ShortestPathServiceTests
     }
 
     [TestMethod]
-    public void Test_ValidPathAtoF()
+    public void TestShortestPath_ValidPathAtoF()
     {
         // Arrange
         var graphNodes = GetTestGraphNodes();
@@ -31,7 +31,7 @@ public class ShortestPathServiceTests
     }
     
     [TestMethod]
-    public void Test_ValidPathAtoI()
+    public void TestShortestPath_ValidPathAtoI()
     {
         // Arrange
         var graphNodes = GetTestGraphNodes();
@@ -61,7 +61,7 @@ public class ShortestPathServiceTests
     }
 
     [TestMethod]
-    public void Test_NoPathAvailableForToNode()
+    public void TestShortestPath_NoPathAvailableForToNode()
     {
         // Arrange
         var graphNodes = GetTestGraphNodes();
@@ -74,7 +74,7 @@ public class ShortestPathServiceTests
     }
 
     [TestMethod]
-    public void Test_NoPathAvailable()
+    public void TestShortestPath_NoPathAvailable()
     {
         // Arrange
         var graphNodes = GetTestGraphNodes();

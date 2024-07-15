@@ -5,7 +5,7 @@ using DijkstraRouteFinder.Services;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 
-namespace DijkstraRouteFinder.TestService;
+namespace DijkstraRouteFinder.Tests;
 
 [TestClass]
 public class ShortestPathControllerTests
