@@ -1,5 +1,5 @@
 <template>
-    <div class="card bg-secondary-subtle">
+    <div class="card background">
         <div class="card-body">
             <div class="d-flex justify-content-between small text-primary mb-3">
                 <div>Total Steps
@@ -35,4 +35,9 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.background {
+    background-color: #ededed;
+    border: 0
+}
+</style>
