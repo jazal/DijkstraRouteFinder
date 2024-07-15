@@ -3,13 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34902.65
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DijkstraRouteFinder.API", "DijkstraRouteFinder.API\DijkstraRouteFinder.API.csproj", "{BD4808E7-2E9B-4B24-A7F9-53182C59503E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DijkstraRouteFinder.API", "DijkstraRouteFinder.API\DijkstraRouteFinder.API.csproj", "{BD4808E7-2E9B-4B24-A7F9-53182C59503E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DijkstraRouteFinder.Models", "DijkstraRouteFinder.Models\DijkstraRouteFinder.Models.csproj", "{DF003F3E-B930-4819-B2FC-E082DE69502F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DijkstraRouteFinder.Models", "DijkstraRouteFinder.Models\DijkstraRouteFinder.Models.csproj", "{DF003F3E-B930-4819-B2FC-E082DE69502F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DijkstraRouteFinder.Services", "DijkstraRouteFinder.Services\DijkstraRouteFinder.Services.csproj", "{04CA8AE6-B1BF-43DF-AC7E-ECEBB8646EB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DijkstraRouteFinder.Services", "DijkstraRouteFinder.Services\DijkstraRouteFinder.Services.csproj", "{04CA8AE6-B1BF-43DF-AC7E-ECEBB8646EB4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DijkstraRouteFinder.ConsoleApp", "DijkstraRouteFinder.ConsoleApp\DijkstraRouteFinder.ConsoleApp.csproj", "{F8D5DFC0-3760-4D06-8835-FEEF31DBEAF9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DijkstraRouteFinder.ConsoleApp", "DijkstraRouteFinder.ConsoleApp\DijkstraRouteFinder.ConsoleApp.csproj", "{F8D5DFC0-3760-4D06-8835-FEEF31DBEAF9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{C5A8B4E0-87FE-4851-8C7F-C35D81A5B156}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DijkstraRouteFinder.TestService", "DijkstraRouteFinder.TestService\DijkstraRouteFinder.TestService.csproj", "{D8C51629-1062-46AA-9B62-AE56DFAF4ACE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,9 +37,16 @@ Global
 		{F8D5DFC0-3760-4D06-8835-FEEF31DBEAF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8D5DFC0-3760-4D06-8835-FEEF31DBEAF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8D5DFC0-3760-4D06-8835-FEEF31DBEAF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8C51629-1062-46AA-9B62-AE56DFAF4ACE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8C51629-1062-46AA-9B62-AE56DFAF4ACE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8C51629-1062-46AA-9B62-AE56DFAF4ACE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8C51629-1062-46AA-9B62-AE56DFAF4ACE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D8C51629-1062-46AA-9B62-AE56DFAF4ACE} = {C5A8B4E0-87FE-4851-8C7F-C35D81A5B156}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E5BF1EFD-7B40-4566-9790-B44B52B3DEB0}

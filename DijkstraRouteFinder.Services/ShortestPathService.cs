@@ -45,6 +45,12 @@ public class ShortestPathService : IShortestPathService
 
     public ShortestPathResponseDto ShortestPath(string fromNodeName, string toNodeName, List<Node> graphNodes)
     {
+        // Validate the fromNodeName and toNodeName
+        var fromNode = graphNodes.FirstOrDefault(n => n.Name == fromNodeName);
+        var toNode = graphNodes.FirstOrDefault(n => n.Name == toNodeName);
+
+        if (fromNode == null || toNode == null) return null;
+
         var shortestPaths = new Dictionary<Node, (int Distance, List<string> Path, List<PathSegmentDto> Segments)>();
         var unvisitedNodes = new List<Node>(graphNodes);
 
@@ -84,7 +90,7 @@ public class ShortestPathService : IShortestPathService
             }
         }
 
-        var endNode = graphNodes.First(n => n.Name == toNodeName);
+        var endNode = graphNodes.FirstOrDefault(n => n.Name == toNodeName);
         return shortestPaths.ContainsKey(endNode) ?
             new ShortestPathResponseDto
             {
@@ -95,4 +101,3 @@ public class ShortestPathService : IShortestPathService
             null;
     }
 }
-
