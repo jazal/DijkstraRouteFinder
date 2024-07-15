@@ -6,7 +6,6 @@ import { VNetworkGraph } from 'v-network-graph';
 import * as vNG from "v-network-graph"
 import 'v-network-graph/lib/style.css';
 
-
 export default {
     components: {
         VNetworkGraph,
@@ -84,7 +83,7 @@ export default {
                 edge: {
                     selectable: true,
                     normal: {
-                        width: 3,
+                        width: 1,
                         color: "#4466cc",
                         dasharray: "0",
                         linecap: "butt",
@@ -92,7 +91,7 @@ export default {
                         animationSpeed: 50,
                     },
                     hover: {
-                        width: 4,
+                        width: 3,
                         color: "#3355bb",
                         dasharray: "0",
                         linecap: "butt",
@@ -100,7 +99,7 @@ export default {
                         animationSpeed: 50,
                     },
                     selected: {
-                        width: 3,
+                        width: 2,
                         color: "#dd8800",
                         dasharray: "6",
                         linecap: "round",
@@ -135,9 +134,29 @@ export default {
                             animationSpeed: 50,
                         },
                     },
+                    marker: {
+                        source: {
+                            type: "none",
+                            width: 2,
+                            height: 2,
+                            margin: -1,
+                            offset: 0,
+                            units: "strokeWidth",
+                            color: null,
+                        },
+                        target: {
+                            type: "arrow",
+                            width: 5,
+                            height: 6,
+                            margin: -1,
+                            offset: 0,
+                            units: "strokeWidth",
+                            color: null,
+                        },
+                    },
                 },
             }),
-            xnodes: {
+            nodes: {
                 nodeA: { name: "A" },
                 nodeB: { name: "B" },
                 nodeC: { name: "C" },
@@ -149,19 +168,31 @@ export default {
                 nodeI: { name: "I" },
             },
             edges: {
-                edge1: { source: "nodeA", target: "nodeB", dis: "4" },
-                edge2: { source: "nodeA", target: "nodeC" },
-                edge3: { source: "nodeB", target: "nodeF" },
-                edge4: { source: "nodeC", target: "nodeD" },
-                edge5: { source: "nodeD", target: "nodeE" },
-                edge6: { source: "nodeE", target: "nodeB" },
-                edge7: { source: "nodeE", target: "nodeF" },
-                edge8: { source: "nodeF", target: "nodeH" },
-                edge9: { source: "nodeF", target: "nodeG" },
-                edge10: { source: "nodeG", target: "nodeI" },
-                edge11: { source: "nodeI", target: "nodeE" },
-                edge12: { source: "nodeH", target: "nodeG" },
-                edge13: { source: "nodeD", target: "nodeG" },
+                edgeAB: { source: "nodeA", target: "nodeB" },
+                edgeBA: { source: "nodeB", target: "nodeA" },
+                edgeAC: { source: "nodeA", target: "nodeC" },
+                edgeCA: { source: "nodeC", target: "nodeA" },
+                edgeBF: { source: "nodeB", target: "nodeF" },
+                edgeFB: { source: "nodeF", target: "nodeB" },
+                edgeCD: { source: "nodeC", target: "nodeD" },
+                edgeDC: { source: "nodeD", target: "nodeC" },
+                edgeDE: { source: "nodeD", target: "nodeE" },
+                edgeED: { source: "nodeE", target: "nodeD" },
+                edgeEB: { source: "nodeE", target: "nodeB" },
+                edgeEF: { source: "nodeE", target: "nodeF" },
+                edgeFE: { source: "nodeF", target: "nodeE" },
+                edgeFH: { source: "nodeF", target: "nodeH" },
+                edgeHF: { source: "nodeH", target: "nodeF" },
+                edgeFG: { source: "nodeF", target: "nodeG" },
+                edgeGF: { source: "nodeG", target: "nodeF" },
+                edgeGI: { source: "nodeG", target: "nodeI" },
+                edgeIG: { source: "nodeI", target: "nodeG" },
+                edgeIE: { source: "nodeI", target: "nodeE" },
+                edgeEI: { source: "nodeE", target: "nodeI" },
+                edgeHG: { source: "nodeH", target: "nodeG" },
+                edgeGH: { source: "nodeG", target: "nodeH" },
+                edgeDG: { source: "nodeD", target: "nodeG" },
+                edgeGD: { source: "nodeG", target: "nodeD" },
             },
             layouts: {
                 nodes: {
@@ -175,18 +206,26 @@ export default {
                     nodeH: { x: 237, y: -5 },
                     nodeI: { x: 285, y: 60 }
                 },
-            }
+            },
+            eventHandlers: {
+                "node:click": ({ node }) => {
+                    console.log(node);
+
+                    // this.nodes[node].active = !this.nodes[node].active;
+                }
+            } as vNG.EventHandlers
         }
     },
     methods: {
-
     }
 }
 </script>
 
 <template>
-    <v-network-graph :nodes="xnodes" :edges="edges" :layouts="layouts" :configs="config" />
-    <!-- <code><pre>{{ layouts }}</pre></code> -->
+    <v-network-graph :nodes="nodes" :edges="edges" :layouts="layouts" :configs="config" :event-handlers="eventHandlers">
+    </v-network-graph>
+    <!-- <code><pre>{{ nodes }}</pre></code>
+    <code><pre>{{ edges }}</pre></code> -->
 </template>
 
 <style scoped></style>
