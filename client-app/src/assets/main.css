@@ -1,0 +1,19 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+@import 'bootstrap';
+/* @import './base.css'; */
+
+.btn-orange {
+  background-color: orange;
+}
+.btn-orange:hover {
+  background-color: rgba(255, 166, 0, 0.849);
+  color: #fff;
+}
+.btn-outline-orange {
+  border: 1px orange solid;
+}
+.btn-outline-orange:hover {
+  background-color: orange;
+  color: #fff;
+}

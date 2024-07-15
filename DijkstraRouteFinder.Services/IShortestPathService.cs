@@ -4,5 +4,5 @@ namespace DijkstraRouteFinder.Services;
 
 public interface IShortestPathService
 {
-    ShortestPathData ShortestPath(string fromNodeName, string toNodeName, List<Node> graphNodes);
+    ShortestPathResponseDto ShortestPath(string fromNodeName, string toNodeName, List<Node> graphNodes);
 }
