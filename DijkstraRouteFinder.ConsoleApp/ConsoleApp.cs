@@ -1,5 +1,4 @@
-﻿// ConsoleApp.cs
-using DijkstraRouteFinder.Models.MockData;
+﻿using DijkstraRouteFinder.Models.MockData;
 using DijkstraRouteFinder.Services;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
