@@ -233,8 +233,6 @@ export default {
             } as vNG.Paths,
             eventHandlers: {
                 "node:click": ({ node }) => {
-                    console.log(node);
-
                     // this.nodes[node].active = !this.nodes[node].active;
                 }
             } as vNG.EventHandlers

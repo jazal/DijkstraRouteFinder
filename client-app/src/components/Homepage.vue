@@ -33,8 +33,7 @@ export default {
         const response = await api.getShortestPath({ fromNode: this.fromNode, toNode: this.toNode })
         this.shortestPath = response.data
       } catch (error: any) {
-        console.error(error)
-        toastService.error(error?.response?.data?.message);
+        toastService.error(error?.response?.data?.message ?? "Server error... Check your api is running?");
       }
     }
   }
