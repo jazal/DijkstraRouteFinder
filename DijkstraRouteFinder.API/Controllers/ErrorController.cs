@@ -1,5 +1,4 @@
 ﻿using DijkstraRouteFinder.API.Errors;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DijkstraRouteFinder.API.Controllers;

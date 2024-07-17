@@ -33,8 +33,7 @@ export default {
         const response = await api.getShortestPath({ fromNode: this.fromNode, toNode: this.toNode })
         this.shortestPath = response.data
       } catch (error: any) {
-        console.error(error)
-        toastService.error(error?.response?.data?.message);
+        toastService.error(error?.response?.data?.message ?? "Server error... Check your api is running?");
       }
     }
   }
@@ -80,7 +79,6 @@ export default {
                       <i class="bi bi-calculator"></i>
                     </button>
                   </form>
-                  <!-- <code><pre>{{ { fromNode, toNode } }}</pre></code> -->
                 </div>
                 <div class="col d-none d-lg-block">
                   <div class="d-flex align-items-center justify-content-around">

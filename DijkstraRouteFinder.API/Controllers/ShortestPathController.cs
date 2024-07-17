@@ -17,7 +17,7 @@ public class ShortestPathController : BaseApiController
     [HttpPost]
     public IActionResult GetShortestPath([FromBody] ShortestPathRequestDto request)
     {
-        var graphNodes = GetGraphNodes(); // Retrieve graph nodes from a data source
+        var graphNodes = GetGraphNodes();
         var result = _shortestPathService.ShortestPath(request.FromNode, request.ToNode, graphNodes);
 
         if (result == null)
@@ -26,9 +26,9 @@ public class ShortestPathController : BaseApiController
         return Ok(result);
     }
 
+    // Initialize graph nodes
     private List<Node> GetGraphNodes()
     {
-        // Initialize your graph nodes here or fetch from a data source
         return GraphNodes.GetGraphNodes();
     }
 }

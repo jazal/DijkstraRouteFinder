@@ -29,35 +29,26 @@ public class ShortestPathServiceTests
         Assert.AreEqual(6, result.Distance);
         CollectionAssert.AreEqual(new List<string> { "A", "B", "F" }, result.NodeNames);
     }
-    
-    [TestMethod]
-    public void TestShortestPath_ValidPathAtoI()
+
+    [DataTestMethod]
+    [DataRow("A", "I", 15, new string[] { "A", "B", "F", "G", "I" })]
+    [DataRow("I", "A", 14, new string[] { "I", "E", "B", "A" })]
+    [DataRow("H", "C", 14, new string[] { "H", "G", "D", "C" })]
+    [DataRow("G", "A", 10, new string[] { "G", "F", "B", "A" })]
+    [DataRow("A", "E", 9, new string[] { "A", "B", "F", "E" })]
+    [DataRow("E", "A", 6, new string[] { "E", "B", "A" })]
+    public void TestShortestPath(string startNode, string endNode, int expectedDistance, string[] expectedPath)
     {
         // Arrange
         var graphNodes = GetTestGraphNodes();
 
         // Act
-        var result = _shortestPathService.ShortestPath("A", "I", graphNodes);
+        var result = _shortestPathService.ShortestPath(startNode, endNode, graphNodes);
 
         // Assert
         Assert.IsNotNull(result);
-        Assert.AreEqual(15, result.Distance);
-        CollectionAssert.AreEqual(new List<string> { "A", "B", "F", "G", "I" }, result.NodeNames);
-    }
-    
-    [TestMethod]
-    public void Test_ValidPathItoA()
-    {
-        // Arrange
-        var graphNodes = GetTestGraphNodes();
-
-        // Act
-        var result = _shortestPathService.ShortestPath("I", "A", graphNodes);
-
-        // Assert
-        Assert.IsNotNull(result);
-        Assert.AreEqual(14, result.Distance);
-        CollectionAssert.AreEqual(new List<string> { "I", "E", "B", "A" }, result.NodeNames);
+        Assert.AreEqual(expectedDistance, result.Distance);
+        CollectionAssert.AreEqual(expectedPath, result.NodeNames);
     }
 
     [TestMethod]
