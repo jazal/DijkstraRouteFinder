@@ -79,7 +79,6 @@ export default {
                       <i class="bi bi-calculator"></i>
                     </button>
                   </form>
-                  <!-- <code><pre>{{ { fromNode, toNode } }}</pre></code> -->
                 </div>
                 <div class="col d-none d-lg-block">
                   <div class="d-flex align-items-center justify-content-around">

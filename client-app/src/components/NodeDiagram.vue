@@ -258,9 +258,6 @@ export default {
     <v-network-graph :nodes="nodes" :edges="edges" :layouts="layouts" :configs="config" :event-handlers="eventHandlers"
         :paths="paths">
     </v-network-graph>
-    <!-- <code><pre>{{ nodes }}</pre></code>
-    <code><pre>{{ edges }}</pre></code> -->
-    <!-- <code><pre>{{ apaths }}</pre></code> -->
 </template>
 
 <style lang="css"></style>
